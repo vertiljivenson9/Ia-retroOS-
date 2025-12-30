@@ -1,0 +1,1 @@
+export const BootSequence = () => <div>Booting...</div>;
