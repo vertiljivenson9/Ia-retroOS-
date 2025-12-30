@@ -3,13 +3,9 @@ import { OSState, WindowState, SystemFile, AppConfig, AgencyBrain } from './type
 import { APP_CONFIGS, DEFAULT_WALLPAPER } from './constants';
 import { kernel } from './services/osKernel';
 import { soundService } from './services/SoundService';
-
-// Core Components
 import { BootSequence } from './components/BootSequence';
 import { LoginScreen } from './components/LoginScreen';
 import { Window } from './components/Window';
-
-// Apps
 import { Explorer } from './apps/Explorer';
 import { VertilIDE } from './apps/VertilIDE';
 import { NexusForge } from './apps/NexusForge';
@@ -73,7 +69,7 @@ const App: React.FC = () => {
       </div>
       {os.windows.map(win => (
         <Window key={win.id} window={win} isActive={os.activeWindowId === win.id} onClose={closeWindow} onMinimize={minimizeWindow} onMaximize={() => {}} onFocus={focusWindow}>
-          {win.appId === 'explorer' && <Explorer files={os.files} onAddFile={f => setOs(p => ({...p, files: [...p.files, f]}))} onOpenFile={f => openApp('media', f.name, 'fa-play-circle', f)} onDeleteFile={id => setOs(p => ({...p, files: p.files.filter(f => f.id !== id)}))} onMoveFile={(id, path) => {}} onCopyFile={() => {}} />}
+          {win.appId === 'explorer' && <Explorer files={os.files} onAddFile={f => setOs(p => ({...p, files: [...p.files, f]}))} onOpenFile={f => openApp('media', f.name, 'fa-play-circle', f)} onDeleteFile={id => setOs(p => ({...p, files: p.files.filter(f => f.id !== id)}))} onMoveFile={() => {}} onCopyFile={() => {}} />}
           {win.appId === 'nexusforge' && <NexusForge os={os} onUpdateOS={u => setOs(p => ({...p, ...u}))} openApp={openApp} />}
           {win.appId === 'sovereignbridge' && <SovereignBridge os={os} onUpdateOS={u => setOs(p => ({...p, ...u}))} initialData={win.initialData} />}
           {win.appId === 'cloud' && <CloudConsole os={os} />}
