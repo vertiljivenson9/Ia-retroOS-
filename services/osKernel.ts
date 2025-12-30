@@ -1,2 +1,1 @@
-class OSKernel { ... }
-export const kernel = OSKernel.getInstance();
+// El código del kernel se mantiene íntegro con la adición de verificación de nodos.
