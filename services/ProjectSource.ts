@@ -1,1 +1,1 @@
-// Contenido recursivo inyectado por el Kernel.
+// Contenido dinámico
