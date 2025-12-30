@@ -1,2 +1,9 @@
 export enum AppType { SYSTEM = 'SYSTEM', USER = 'USER' }
-export interface OSState { booted: boolean; isLocked: boolean; ... }
+export interface AppConfig { id: string; name: string; icon: string; color: string; category?: 'app' | 'game'; orientation?: 'portrait' | 'landscape'; isThirdParty?: boolean; musicUrl?: string; vpxHash?: string; sourceCode?: string; author?: string; version?: string; }
+export interface WindowState { id: string; appId: string; title: string; isMaximized: boolean; isMinimized: boolean; zIndex: number; icon: string; isAdmin?: boolean; initialData?: any; orientation?: 'portrait' | 'landscape'; }
+export interface SystemFile { id: string; name: string; path: string; type: 'file' | 'folder'; extension?: string; content?: string; isEncrypted?: boolean; isSystemFile?: boolean; size: number; createdAt?: number; modifiedAt?: number; owner?: string; }
+export interface Process { pid: number; name: string; status: string; memoryUsage: number; }
+export interface VertilService { id: string; namespace: string; type: string; status: string; }
+export interface AudioSettings { isDriverInstalled: boolean; bands: number[]; preset: string; }
+export interface AgencyBrain { learnedPatterns: string[]; lastSync: number; sessionKnowledge: string; systemContext: string; }
+export interface OSState { booted: boolean; isLocked: boolean; isOff: boolean; isSuspended: boolean; authorizedUser: string; isSecurityConfigured: boolean; manualBypassAllowed: boolean; biosStage: number; wallpaper: string; ssdUsed: number; ramUsed: number; windows: WindowState[]; activeWindowId: string | null; files: SystemFile[]; processes: Process[]; services: VertilService[]; installedApps: AppConfig[]; githubRepo?: string; githubToken?: string; isDevMode: boolean; audioSettings: AudioSettings; allowUnknownSources: boolean; restorePoint: any; externalDriveLinked: boolean; driveUrl: string | null; agencyBrain?: AgencyBrain; systemDirty?: boolean; }
