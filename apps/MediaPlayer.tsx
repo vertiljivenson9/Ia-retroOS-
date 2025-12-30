@@ -1,0 +1,1 @@
+export const VertilMedia = () => <div>Media</div>;
