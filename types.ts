@@ -1,2 +1,2 @@
-export interface WindowState { id: string; appId: string; title: string; isMaximized: boolean; isMinimized: boolean; zIndex: number; icon: string; initialData?: any; orientation?: 'portrait' | 'landscape'; }
-export interface OSState { booted: boolean; isLocked: boolean; isOff: boolean; authorizedUser: string; wallpaper: string; windows: WindowState[]; activeWindowId: string | null; files: any[]; githubRepo?: string; githubToken?: string; systemDirty?: boolean; allowUnknownSources: boolean; manualBypassAllowed: boolean; }
+export interface WindowState { id: string; appId: string; title: string; isMaximized: boolean; isMinimized: boolean; zIndex: number; icon: string; }
+export interface OSState { booted: boolean; isLocked: boolean; isOff: boolean; authorizedUser: string; wallpaper: string; windows: WindowState[]; activeWindowId: string | null; files: any[]; githubRepo?: string; githubToken?: string; systemDirty?: boolean; }
