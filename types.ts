@@ -1,2 +1,2 @@
 export enum AppType { SYSTEM = 'SYSTEM', USER = 'USER' }
-export interface OSState { booted: boolean; isLocked: boolean; isOff: boolean; authorizedUser: string; githubToken?: string; githubRepo?: string; files: any[]; windows: any[]; installedApps: any[]; }
+export interface OSState { booted: boolean; isLocked: boolean; ... }
