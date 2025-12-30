@@ -1,0 +1,1 @@
+export const PowerShell = () => <div>Terminal</div>;
