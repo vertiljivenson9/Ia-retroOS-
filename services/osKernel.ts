@@ -1,0 +1,1 @@
+export const kernel = { generateId: () => Math.random().toString(36) };
