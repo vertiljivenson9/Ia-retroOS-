@@ -1,0 +1,9 @@
+{
+  "name": "retroOS - Vertil Edition",
+  "description": "A high-performance web mobile OS with professional Windows aesthetics and V-HiFi Video Engine.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
