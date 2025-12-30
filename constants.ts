@@ -1,0 +1,1 @@
+export const SYSTEM_SSD_MAX = 32; export const DEFAULT_WALLPAPER = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe";
