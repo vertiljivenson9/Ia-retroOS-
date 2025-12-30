@@ -1,12 +1,21 @@
 [build]
   publish = "."
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
+[[edge_functions]]
+  path = "/api/neural-vault"
+  function = "neural-vault"
+
 [[headers]]
   for = "/*"
   [headers.values]
     Permissions-Policy = "camera=(self), microphone=(self), geolocation=(self)"
+    X-RetroOS-Edition = "Vertil-Forge-v5"
