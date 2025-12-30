@@ -1,0 +1,1 @@
+export const VertilIDE = () => <div>IDE</div>;
